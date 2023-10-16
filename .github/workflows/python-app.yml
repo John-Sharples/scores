@@ -35,4 +35,7 @@ jobs:
       run: |
         pip install pytest pytest-cov
         pytest --cov-report html --cov=src --junitxml=junit/test-results.xml --junitxml=junit/test-results.xml
+    - name: Report test coverage
+      run: |
+        coverage report -m
         
