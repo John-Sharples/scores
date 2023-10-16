@@ -5,7 +5,7 @@ name: Unit Tests
 
 on:
   push:
-    branches: ["develop", "main", "[0-9]+-*"]
+    branches: ["develop", "main"]
   pull_request:
     branches: ["develop", "main"]
 
@@ -34,8 +34,5 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest pytest-cov
-        coverage run -m pytest --cov=src --debug=trace
-    - name: Report test coverage
-      run: |
-        coverage report -m
+        pytest --cov-report html --cov=src --junitxml=junit/test-results.xml --junitxml=junit/test-results.xml
         
