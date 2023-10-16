@@ -35,4 +35,6 @@ jobs:
       run: |
         pip install pytest pytest-cov
         coverage run -m pytest
-        
+    - name: Report test coverage
+      run: |
+        coverage report -m
