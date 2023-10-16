@@ -37,5 +37,7 @@ jobs:
         pytest --cov-report html --cov=src --junitxml=junit/test-results.xml --junitxml=junit/test-results.xml
     - name: Report test coverage
       run: |
+        VERS=$(coverage --version)
+        echo "${VERS}"
         coverage report -m
         
