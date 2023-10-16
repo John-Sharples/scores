@@ -81,6 +81,4 @@ warn_unused_configs = true
 ignore_missing_imports = true
 
 [tool.coverage.run]
-source = src/*
-omit = tutorials/*, docs/*, tests/*
-
+source = "src/*"
