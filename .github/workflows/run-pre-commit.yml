@@ -28,5 +28,4 @@ jobs:
         pip install .[all]
     - name: pre-commit checks
       run: |
-        pip install pre-commit
         pre-commit run
