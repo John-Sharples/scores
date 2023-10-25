@@ -28,4 +28,4 @@ jobs:
         pip install .[all]
     - name: pre-commit checks
       run: |
-        pre-commit run
+        pre-commit run -a
